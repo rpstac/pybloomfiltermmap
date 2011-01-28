@@ -60,6 +60,9 @@ cdef class BloomFilter:
             if not os.path.exists(filename):
                 raise OSError("File %s not found" % filename)
 
+            if not os.access(filename, os.O_RDWR):
+                raise OSError("Insufficient permissions for file %s" % filename)
+
         mode = construct_mode(mode)
 
 
