@@ -143,6 +143,12 @@ void mbarray_Destroy(MBArray * array)
             free((void *)array->filename);
             array->filename = NULL;
         }
+
+	/* Make sure that we close the file associated with this array. */
+	if (array->fd) {
+	    close(array->fd);
+	}
+
         free(array);
     }
 }

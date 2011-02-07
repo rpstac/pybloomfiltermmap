@@ -228,5 +228,8 @@ cdef class BloomFilter:
         bfile.close()
         return result
 
+    def __dealloc__(self):
+        cbloomfilter.bloomfilter_Destroy(self._bf)
+
     from_base64 = staticmethod(bf_from_base64)
     open = staticmethod(bf_from_file)
