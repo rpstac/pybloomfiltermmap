@@ -3,9 +3,12 @@
 The goal of `pybloomfiltermmap` is simple: to provide a fast, simple, scalable,
 correct library for Bloom Filters in Python.
 
+This fork of the project fixes some issues when using a lot of these objects and/or 
+an erroneous error message ;).
+
 ## Docs
 
-You should probably read the docs online at <http://mike.axiak.net/python-bloom-filter/docs/html/>
+You should probably read the original docs online at <http://mike.axiak.net/python-bloom-filter/docs/html/>
 
 ## Overview
 
@@ -33,5 +36,5 @@ and you should be set.
 
 ## License
 
-See the LICENSE file. I am licensing it under the MIT License.
+See the LICENSE file. It's under the MIT License.
 
